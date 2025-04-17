@@ -13,17 +13,8 @@ class NetworkHelper {
     String body = '';
     if (response.statusCode == 200) {
       body = response.body;
-
       return jsonDecode(body);
-      /*
-      double temperature = decodedData['current']['temp_c'];
-      int condition = decodedData['current']['condition']['code'];
-      String cityName = decodedData['location']['name'];
 
-      print(temperature);
-      print(condition);
-      print(cityName);
-      */
     } else {
       print(response.statusCode);
     }
